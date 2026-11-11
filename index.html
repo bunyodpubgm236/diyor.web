@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Oyinlar - Manga Sharhlari</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">M</span>
+                <h1>Manga Oyinlar</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Bosh sahifa</a></li>
+                <li><a href="#manga-list">Mangalar</a></li>
+                <li><a href="#add-manga">Sharh qo'shish</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Sevimli Manga Oyinlaringizni Kashing!</h2>
+            <p>Eng yaxshi manga sharhlari, reytinglar va tavsiyalar bir joyda.</p>
+            <a href="#manga-list" class="btn-primary">Mangalarni Ko'rish</a>
+        </div>
+    </section>
+
+    <!-- Manga List -->
+    <section id="manga-list" class="manga-section">
+        <h2 class="section-title">Manga Sharhlari</h2>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Manga qidirish...">
+            <button id="searchBtn" class="btn-search">Qidirish</button>
+        </div>
+        <div id="mangaContainer" class="manga-grid">
+            <!-- JS orqali manga kartalari shu yerga qo'shiladi -->
+        </div>
+    </section>
+
+    <!-- Add Manga Form -->
+    <section id="add-manga" class="form-section">
+        <h2 class="section-title">Yangi Manga Sharhi Qo'shish</h2>
+        <form id="mangaForm" class="manga-form">
+            <div class="form-group">
+                <label for="mangaTitle">Manga Nomi:</label>
+                <input type="text" id="mangaTitle" required placeholder="Masalan: One Piece">
+            </div>
+            <div class="form-group">
+                <label for="mangaAuthor">Muallif:</label>
+                <input type="text" id="mangaAuthor" required placeholder="Masalan: Eiichiro Oda">
+            </div>
+            <div class="form-group">
+                <label for="mangaGenre">Janr:</label>
+                <select id="mangaGenre" required>
+                    <option value="">Janrni tanlang</option>
+                    <option value="Aksiya">Aksiya</option>
+                    <option value="Sarguzisht">Sarguzisht</option>
+                    <option value="Komediya">Komediya</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Fantastika">Fantastika</option>
+                    <option value="Qo'rqinchli">Qo'rqinchli</option>
+                    <option value="Romantika">Romantika</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mangaRating">Reyting (1-10):</label>
+                <input type="number" id="mangaRating" min="1" max="10" required placeholder="1-10">
+            </div>
+            <div class="form-group">
+                <label for="mangaReview">Sharh:</label>
+                <textarea id="mangaReview" rows="4" required placeholder="Manga haqida fikringiz..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Sharh Qo'shish</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Manga Oyinlar. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
